@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    image: xpop/echo_server
+    ports:
+      - '3000:3000'
+    environment:
+      - PORT=3000
+    # volumes:
+    #   - .:/app
+    #   - /app/vendor
+    env_file:
+      - .env
